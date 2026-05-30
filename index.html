@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambal Pecel Rindu Kediri</title>
+    <!-- Tailwind CSS untuk Styling Cepat & Responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#3A2618', // Coklat tua khas pecel
+                            gold: '#C59B27', // Emas elegan
+                            light: '#F4EFE6', // Warna background kertas kraft
+                            green: '#2E4C23' // Hijau daun jeruk
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e5dfd3;
+            /* Pola batik tipis untuk background luar (jika dibuka di laptop) */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='#d4ccb7' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        /* Animasi melayang untuk tombol */
+        .hover-float {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Glassmorphism effect untuk card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Menyembunyikan scrollbar tapi tetap bisa di-scroll (untuk area varian produk) */
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800 min-h-screen flex justify-center">
+
+    <!-- Mobile Wrapper: Membatasi lebar agar terlihat seperti aplikasi di HP -->
+    <div class="w-full max-w-md bg-brand-light min-h-screen shadow-2xl relative overflow-hidden pb-12">
+        
+        <!-- Ornamen Header (Batik/Islamic Pattern) -->
+        <div class="absolute top-0 left-0 w-full h-48 bg-brand-dark opacity-10" 
+             style="background-image: url('data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z\' fill=\'%23000000\' fill-opacity=\'1\' fill-rule=\'evenodd\'/%3E%3C/svg%3E');">
+        </div>
+
+        <!-- Header Profile -->
+        <header class="relative pt-10 pb-6 px-6 text-center z-10">
+            <!-- Logo Halal -->
+            <div class="absolute top-4 right-4 bg-white p-1.5 rounded-md shadow-sm">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Halal_Indonesia_Logo.svg/1200px-Halal_Indonesia_Logo.svg.png" alt="Halal Indonesia" class="h-8">
+            </div>
+            
+            <h1 class="font-serif text-3xl font-bold text-brand-dark leading-tight mt-4">
+                <span class="text-xl font-sans font-medium tracking-widest text-brand-gold uppercase block mb-1">Sambal Pecel</span>
+                RINDU KEDIRI
+            </h1>
+            <p class="mt-2 text-sm font-medium text-brand-green bg-green-100 inline-block px-4 py-1 rounded-full border border-green-200">
+                "Satu rasa, Banyak cerita"
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="relative z-10 px-5 space-y-7">
+            
+            <!-- Video Section -->
+            <section class="glass-card rounded-2xl p-3 shadow-lg border-b-4 border-brand-gold">
+                <div class="flex items-center gap-2 mb-3 px-1">
+                    <i class="fa-solid fa-film text-brand-gold"></i>
+                    <h2 class="font-bold text-brand-dark text-sm tracking-wide">MENGOBATI RINDU KEDIRI</h2>
+                </div>
+                <!-- YouTube Embed: Ganti src dengan link video youtube pilihanmu -->
+                <div class="relative w-full overflow-hidden rounded-xl aspect-video bg-gray-200 shadow-inner">
+                    <iframe class="absolute top-0 left-0 w-full h-full" 
+                        src="https://www.youtube.com/embed/5R73t66f7fE?si=vP8tX8YxY3r8Q9_w" 
+                        title="Video Tentang Kediri" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="text-xs text-center text-gray-500 mt-2 italic">Tonton keindahan kampung halaman sembari menikmati pecel.</p>
+            </section>
+
+            <!-- Varian Produk Section (Baru Ditambahkan) -->
+            <section>
+                <div class="flex items-center gap-2 mb-3 px-2">
+                    <i class="fa-solid fa-box-open text-brand-dark"></i>
+                    <h2 class="font-bold text-brand-dark text-sm tracking-wide">PILIHAN VARIAN UKURAN</h2>
+                </div>
+                
+                <!-- Container Slider Horizontal -->
+                <div class="flex overflow-x-auto gap-4 pb-4 snap-x hide-scroll">
+                    
+                    <!-- Card 1: 100 Gram -->
+                    <div class="snap-start shrink-0 w-36 bg-white rounded-xl shadow-md overflow-hidden border-b-4 border-brand-gold">
+                        <div class="h-32 bg-gray-200 relative">
+                            <!-- GANTI SRC GAMBAR DI BAWAH INI DENGAN FOTO PRODUK 100gr MILIKMU -->
+                            <img src="https://images.unsplash.com/photo-1596649283728-66236b2f7633?auto=format&fit=crop&w=300&q=80" alt="Kemasan 100gr" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-2">
+                                <span class="text-white font-bold text-sm">100 Gram</span>
+                            </div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-[10px] text-gray-500 mb-2">Kemasan Praktis & Icip-icip</p>
+                            <!-- Kamu bisa arahkan link ini khusus ke halaman shopee produk 100gr -->
+                            <a href="#" class="block bg-brand-green hover:bg-brand-dark text-white text-[11px] font-bold py-1.5 px-2 rounded transition-colors shadow-sm">Pilih Varian</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: 250 Gram -->
+                    <div class="snap-start shrink-0 w-36 bg-white rounded-xl shadow-md overflow-hidden border-b-4 border-brand-gold">
+                        <div class="h-32 bg-gray-200 relative">
+                            <!-- GANTI SRC GAMBAR DI BAWAH INI DENGAN FOTO PRODUK 250gr MILIKMU -->
+                            <img src="https://images.unsplash.com/photo-1596649283728-66236b2f7633?auto=format&fit=crop&w=300&q=80" alt="Kemasan 250gr" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-2">
+                                <span class="text-white font-bold text-sm">250 Gram</span>
+                            </div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-[10px] text-gray-500 mb-2">Pas Untuk Keluarga</p>
+                            <!-- Kamu bisa arahkan link ini khusus ke halaman shopee produk 250gr -->
+                            <a href="#" class="block bg-brand-green hover:bg-brand-dark text-white text-[11px] font-bold py-1.5 px-2 rounded transition-colors shadow-sm">Pilih Varian</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: 500 Gram -->
+                    <div class="snap-start shrink-0 w-36 bg-white rounded-xl shadow-md overflow-hidden border-b-4 border-brand-gold">
+                        <div class="h-32 bg-gray-200 relative">
+                            <!-- GANTI SRC GAMBAR DI BAWAH INI DENGAN FOTO PRODUK 500gr MILIKMU -->
+                            <img src="https://images.unsplash.com/photo-1596649283728-66236b2f7633?auto=format&fit=crop&w=300&q=80" alt="Kemasan 500gr" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-2">
+                                <span class="text-white font-bold text-sm">500 Gram</span>
+                            </div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-[10px] text-gray-500 mb-2">Lebih Hemat & Puas</p>
+                            <!-- Kamu bisa arahkan link ini khusus ke halaman shopee produk 500gr -->
+                            <a href="#" class="block bg-brand-green hover:bg-brand-dark text-white text-[11px] font-bold py-1.5 px-2 rounded transition-colors shadow-sm">Pilih Varian</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Beli Sekarang Section -->
+            <section>
+                <div class="flex items-center gap-2 mb-3 px-2">
+                    <i class="fa-solid fa-shopping-cart text-brand-dark"></i>
+                    <h2 class="font-bold text-brand-dark text-sm tracking-wide">BELI SEKARANG (Semua Varian)</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-3">
+                    <!-- Shopee Button -->
+                    <!-- Ganti href dengan link toko shopee kamu -->
+                    <a href="https://shopee.co.id/pecelrindukediri" target="_blank" class="hover-float flex items-center justify-between w-full bg-gradient-to-r from-[#ee4d2d] to-[#ff7337] text-white p-4 rounded-xl shadow-md border border-orange-500 relative overflow-hidden group">
+                        <div class="absolute right-0 top-0 opacity-10 group-hover:scale-125 transition-transform duration-500">
+                            <i class="fa-solid fa-shopping-bag text-8xl -mt-4 -mr-4"></i>
+                        </div>
+                        <div class="flex items-center gap-4 relative z-10">
+                            <div class="bg-white p-2 rounded-lg text-[#ee4d2d]">
+                                <i class="fa-solid fa-shopping-bag text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="font-bold text-lg leading-none">Shopee</h3>
+                                <p class="text-xs text-orange-100 mt-1">Gratis Ongkir & Promo</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right relative z-10"></i>
+                    </a>
+
+                    <!-- GoShop/Gojek Button -->
+                    <!-- Ganti href dengan link gofood/goshop kamu -->
+                    <a href="#" target="_blank" class="hover-float flex items-center justify-between w-full bg-gradient-to-r from-[#00aa13] to-[#00d017] text-white p-4 rounded-xl shadow-md border border-green-600 relative overflow-hidden group">
+                        <div class="absolute right-0 top-0 opacity-10 group-hover:scale-125 transition-transform duration-500">
+                            <i class="fa-solid fa-motorcycle text-8xl -mt-4 -mr-4"></i>
+                        </div>
+                        <div class="flex items-center gap-4 relative z-10">
+                            <div class="bg-white p-2 rounded-lg text-[#00aa13]">
+                                <i class="fa-solid fa-motorcycle text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="font-bold text-lg leading-none">GoShop / GoFood</h3>
+                                <p class="text-xs text-green-100 mt-1">Pesan instan di area Kediri</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right relative z-10"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Hubungi Kami Section -->
+            <section class="grid grid-cols-2 gap-3 mt-4">
+                <!-- WhatsApp -->
+                <!-- Nomor sudah disesuaikan dengan kemasan -->
+                <a href="https://wa.me/62895328409020?text=Halo,%20saya%20tertarik%20dengan%20Sambal%20Pecel%20Rindu%20Kediri." target="_blank" class="hover-float flex flex-col items-center justify-center bg-white p-4 rounded-xl shadow-md border-b-4 border-[#25D366] text-center gap-2 group">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-colors duration-300">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-sm">Chat WA</h3>
+                        <p class="text-[10px] text-gray-500">Admin Ramah</p>
+                    </div>
+                </a>
+
+                <!-- Google Maps -->
+                <!-- Ganti href dengan link google maps lokasimu -->
+                <a href="https://maps.google.com" target="_blank" class="hover-float flex flex-col items-center justify-center bg-white p-4 rounded-xl shadow-md border-b-4 border-[#4285F4] text-center gap-2 group">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-[#4285F4] group-hover:bg-[#4285F4] group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-map-location-dot text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-sm">Lokasi Kami</h3>
+                        <p class="text-[10px] text-gray-500">Kunjungi Outlet</p>
+                    </div>
+                </a>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center pb-8 z-10 relative">
+            <div class="flex justify-center gap-4 mb-4">
+                <!-- Ganti href dengan link Instagram mu -->
+                <a href="https://instagram.com/pecelrindukediri" target="_blank" class="text-brand-dark hover:text-brand-gold transition-colors">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" target="_blank" class="text-brand-dark hover:text-brand-gold transition-colors">
+                    <i class="fa-brands fa-facebook text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-xs text-brand-dark font-medium opacity-70">
+                &copy; 2024 Sambal Pecel Rindu Kediri.<br>Semua Hak Cipta Dilindungi.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
