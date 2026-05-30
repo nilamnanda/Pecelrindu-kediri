@@ -78,10 +78,10 @@
         </div>
 
         <!-- Header -->
-        <header class="relative pt-8 pb-6 px-6 text-center z-10">
+        <header class="relative pt-8 pb-4 px-6 text-center z-10">
             <!-- Logo Halal Ringkas -->
             <div class="absolute top-4 right-4 bg-white/95 p-1.5 rounded-lg shadow-sm border border-brand-gold/20 flex items-center gap-1">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Halal_Indonesia_Logo.svg/1200px-Halal_Indonesia_Logo.svg.png" alt="Halal Indonesia" class="h-6">
+                <img src="logo halall" alt="Halal Indonesia" class="h-6">
                 <span class="text-[9px] font-bold text-brand-dark">HALAL</span>
             </div>
             
@@ -94,10 +94,22 @@
             </p>
         </header>
 
+        <!-- PEMBERITAHUAN PROMO DOUBLE DATE (DINAMIS & EYE-CATCHING) -->
+        <div class="mx-5 mb-4 relative z-10 bg-gradient-to-r from-red-600 to-orange-500 text-white p-3 rounded-xl shadow-md flex items-center gap-3 animate-pulse">
+            <div class="bg-white/20 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-calendar-check text-lg"></i>
+            </div>
+            <div class="text-left">
+                <h4 class="font-bold text-xs uppercase tracking-wider">🎉 PROMO DOUBLE DATE TERBATAS!</h4>
+                <p class="text-[10px] text-red-500 bg-white px-1.5 py-0.5 rounded font-semibold inline-block mt-1">Diskon 15% All Varian di Shopee</p>
+                <p class="text-[9px] opacity-90 mt-1">*Hanya berlaku saat tanggal kembar (6.6, 7.7, dst).</p>
+            </div>
+        </div>
+
         <!-- Main Wrapper -->
         <main class="relative z-10 px-5 space-y-8">
             
-            <!-- VIDEO CARA PENYAJIAN INTERAKTIF (FITUR BARU) -->
+            <!-- VIDEO CARA PENYAJIAN INTERAKTIF -->
             <section class="glass-card rounded-2xl p-4 shadow-lg border-b-4 border-brand-green relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-brand-green text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
                     Tutorial
@@ -115,7 +127,6 @@
 
                 <!-- Main Video Embed dengan Transisi -->
                 <div class="relative w-full overflow-hidden rounded-xl aspect-video bg-black shadow-inner video-container">
-                    <!-- Default Video: Cara Seduh Klasik -->
                     <iframe id="tutorialVideo" class="absolute top-0 left-0 w-full h-full" 
                         src="https://www.youtube.com/embed/5R73t66f7fE?si=vP8tX8YxY3r8Q9_w" 
                         title="Cara Penyajian Sambal Pecel" 
@@ -130,23 +141,18 @@
                     🍜 Cara 1: Penyajian Klasik (Diseduh Air Hangat)
                 </p>
 
-                <!-- Tombol Navigasi Pilihan Video (Sangat Interaktif!) -->
+                <!-- Tombol Navigasi Pilihan Video -->
                 <div class="grid grid-cols-3 gap-2 mt-3">
-                    <!-- Tombol Video 1 -->
                     <button onclick="changeVideo('https://www.youtube.com/embed/5R73t66f7fE?si=vP8tX8YxY3r8Q9_w', '🍜 Cara 1: Penyajian Klasik (Diseduh Air Hangat)', this)" 
                             class="video-btn active-btn bg-brand-green text-white text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-brand-green flex flex-col items-center gap-1 transition-all">
                         <i class="fa-solid fa-mug-hot text-xs"></i>
                         <span>Seduh Air</span>
                     </button>
-                    <!-- Tombol Video 2 -->
-                    <!-- GANTI link di bawah dengan Video Penyajian Kreasi Sayur/Gorengan milikmu -->
                     <button onclick="changeVideo('https://www.youtube.com/embed/O4fO6N_3D64', '🥗 Cara 2: Kreasi Sayur Segar & Gorengan renyah', this)" 
                             class="video-btn bg-white text-brand-dark hover:bg-gray-50 text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-gray-200 flex flex-col items-center gap-1 transition-all">
                         <i class="fa-solid fa-leaf text-xs text-brand-green"></i>
                         <span>Kreasi Sayur</span>
                     </button>
-                    <!-- Tombol Video 3 -->
-                    <!-- GANTI link di bawah dengan Video Tips penyimpanan agar awet -->
                     <button onclick="changeVideo('https://www.youtube.com/embed/3_7YpP72tKk', '❄️ Cara 3: Tips Menyimpan Pecel Agar Tahan 6 Bulan', this)" 
                             class="video-btn bg-white text-brand-dark hover:bg-gray-50 text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-gray-200 flex flex-col items-center gap-1 transition-all">
                         <i class="fa-solid fa-snowflake text-xs text-blue-500"></i>
@@ -155,7 +161,42 @@
                 </div>
             </section>
 
-            <!-- VARIAN PRODUK (FOTO PLACEHOLDER ELEGAN) -->
+            <!-- PROMO PAKET RINDU HEMAT (BELI 3 LEBIH HEMAT - BARU) -->
+            <section class="bg-gradient-to-br from-amber-50 to-orange-100/50 p-4 rounded-2xl border-2 border-brand-gold shadow-md relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-20 h-20 bg-brand-gold rotate-45 flex items-end justify-center pb-2">
+                    <span class="text-white text-[9px] font-bold -rotate-45 tracking-widest">HEMAT</span>
+                </div>
+                
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="w-7 h-7 rounded-full bg-brand-gold text-white flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-tags text-xs"></i>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-brand-dark text-sm tracking-wide leading-none">PAKET RINDU HEMAT</h2>
+                        <span class="text-[10px] text-gray-500 font-medium">Beli 3 Varian Sekaligus Jauh Lebih Murah!</span>
+                    </div>
+                </div>
+
+                <!-- Detail Promo -->
+                <div class="flex items-center justify-between gap-4 bg-white/80 p-3 rounded-xl border border-brand-gold/20 mb-3">
+                    <div class="text-left">
+                        <span class="bg-brand-green text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">Dapat 3 Ukuran</span>
+                        <h4 class="font-bold text-brand-dark text-sm mt-1">Paket Varian Lengkap</h4>
+                        <p class="text-[10px] text-gray-500 mt-0.5">Isi paket: 100gr + 250gr + 500gr</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[10px] text-red-500 line-through font-semibold leading-none">Rp 126.000</p>
+                        <p class="text-lg font-extrabold text-brand-green mt-1 leading-none">Rp 105.000</p>
+                        <span class="text-[9px] font-bold text-white bg-red-500 px-1.5 py-0.5 rounded inline-block mt-1">Hemat Rp 21.000</span>
+                    </div>
+                </div>
+
+                <a href="https://shopee.co.id/pecelrindukediri" target="_blank" class="hover-float block text-center bg-brand-green hover:bg-brand-dark text-white text-xs font-bold py-2.5 px-4 rounded-xl transition-all shadow-md">
+                    <i class="fa-solid fa-shopping-bag mr-2"></i>Ambil Paket Hemat Sekarang
+                </a>
+            </section>
+
+            <!-- VARIAN PRODUK (MENGGUNAKAN GAMBAR PNG YANG SUDAH KAMU UPLOAD) -->
             <section class="space-y-3">
                 <div class="flex items-center gap-2 px-1">
                     <div class="w-7 h-7 rounded-full bg-brand-dark/10 flex items-center justify-center text-brand-dark">
@@ -172,54 +213,54 @@
                     
                     <!-- Varian 100g -->
                     <div class="snap-start shrink-0 w-36 bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col justify-between">
-                        <div class="h-28 bg-amber-100 relative">
-                            <!-- [Foto Kemasan 100gr] -->
-                            <img src="https://images.unsplash.com/photo-1596649283728-66236b2f7633?auto=format&fit=crop&w=300&q=80" alt="Kemasan 100gr" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                        <div class="h-28 bg-brand-light relative flex items-center justify-center p-2">
+                            <!-- Link ke file 100gr.png di folder yang sama -->
+                            <img src="100gr.png" alt="Kemasan 100gr" class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300">
                             <div class="absolute top-2 left-2 bg-brand-gold text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-sm">
-                                Best Price
+                                Varian 100g
                             </div>
                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-2">
                                 <span class="text-white font-bold text-xs">Kemasan 100g</span>
                             </div>
                         </div>
                         <div class="p-2.5 text-center bg-white">
-                            <p class="text-[10px] text-gray-500 mb-2">Pas buat porsi sekali coba/traveling.</p>
+                            <p class="text-[10px] text-gray-500 mb-2">Pas buat porsi sekali coba / traveling.</p>
                             <a href="https://shopee.co.id/pecelrindukediri" target="_blank" class="block w-full bg-brand-dark hover:bg-brand-gold text-white text-[10px] font-bold py-1.5 rounded transition-all">Pesan Varian</a>
                         </div>
                     </div>
 
                     <!-- Varian 250g -->
                     <div class="snap-start shrink-0 w-36 bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col justify-between">
-                        <div class="h-28 bg-amber-100 relative">
-                            <!-- [Foto Kemasan 250gr] -->
-                            <img src="https://images.unsplash.com/photo-1596649283728-66236b2f7633?auto=format&fit=crop&w=300&q=80" alt="Kemasan 250gr" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                        <div class="h-28 bg-brand-light relative flex items-center justify-center p-2">
+                            <!-- Link ke file 250gr.png di folder yang sama -->
+                            <img src="250gr.png" alt="Kemasan 250gr" class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300">
                             <div class="absolute top-2 left-2 bg-brand-green text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-sm">
-                                Terlaris
+                                Varian 250g
                             </div>
                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-2">
                                 <span class="text-white font-bold text-xs">Kemasan 250g</span>
                             </div>
                         </div>
                         <div class="p-2.5 text-center bg-white">
-                            <p class="text-[10px] text-gray-500 mb-2">Ukuran standar pas untuk stock rumah.</p>
+                            <p class="text-[10px] text-gray-500 mb-2">Ukuran standar pas untuk stok rumah.</p>
                             <a href="https://shopee.co.id/pecelrindukediri" target="_blank" class="block w-full bg-brand-dark hover:bg-brand-gold text-white text-[10px] font-bold py-1.5 rounded transition-all">Pesan Varian</a>
                         </div>
                     </div>
 
-                    <!-- Varian 500g -->
+                    <!-- Varian 500g (Pembaruan: Menggunakan 500gr.png & Menghapus diskon permanen) -->
                     <div class="snap-start shrink-0 w-36 bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col justify-between">
-                        <div class="h-28 bg-amber-100 relative">
-                            <!-- [Foto Kemasan 500gr] -->
-                            <img src="https://images.unsplash.com/photo-1596649283728-66236b2f7633?auto=format&fit=crop&w=300&q=80" alt="Kemasan 500gr" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
-                            <div class="absolute top-2 left-2 bg-[#2a9d8f] text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-sm">
-                                Hemat 15%
+                        <div class="h-28 bg-brand-light relative flex items-center justify-center p-2">
+                            <!-- Link ke file 500gr.png di folder yang sama -->
+                            <img src="500gr.png" alt="Kemasan 500gr" class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2 bg-brand-dark text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-sm">
+                                Varian 500g
                             </div>
                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-2">
                                 <span class="text-white font-bold text-xs">Kemasan 500g</span>
                             </div>
                         </div>
                         <div class="p-2.5 text-center bg-white">
-                            <p class="text-[10px] text-gray-500 mb-2">Lebih murah, puas dimakan sekeluarga!</p>
+                            <p class="text-[10px] text-gray-500 mb-2">Porsi jumbo, puas dimakan sekeluarga!</p>
                             <a href="https://shopee.co.id/pecelrindukediri" target="_blank" class="block w-full bg-brand-dark hover:bg-brand-gold text-white text-[10px] font-bold py-1.5 rounded transition-all">Pesan Varian</a>
                         </div>
                     </div>
@@ -248,7 +289,7 @@
                             </div>
                             <div class="text-left">
                                 <h3 class="font-bold text-base leading-none">Pesan Lewat Shopee</h3>
-                                <p class="text-[11px] text-orange-100 mt-1">Dapatkan promo Cashback & Gratis Ongkir</p>
+                                <p class="text-[11px] text-orange-100 mt-1">Dapatkan promo Cashback &amp; Gratis Ongkir</p>
                             </div>
                         </div>
                         <i class="fa-solid fa-chevron-right text-sm"></i>
