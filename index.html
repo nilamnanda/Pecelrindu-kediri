@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambal Pecel Rindu Kediri - Official Hub</title>
+    <title>Sambal Pecel Rindu Kediri - Official Premium Hub</title>
+    <!-- Tailwind CSS untuk Layouting Fleksibel -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk Ragam Ikon Menarik -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display (Klasik Tebal) & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        tradisi: ['Cinzel', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        pecel: {
-                            tua: '#2C1A11',     // Coklat bumbu pecel matang
-                            muda: '#4A3121',    // Coklat hangat premium
-                            daun: '#1E3514',    // Hijau pincuk daun pisang
-                            emas: '#D4A373',    // Emas kuno tradisional
-                            kertas: '#F4EFE6'   // Krem kertas kraft/besek
+                        brand: {
+                            dark: '#2A140A',    // Coklat pecel pekat premium
+                            sedang: '#3D1F11',  // Coklat bumbu hangat
+                            gold: '#C59341',    // Emas kuningan keraton
+                            goldbright: '#E5B869', // Emas kilau aksen
+                            green: '#153E19',   // Hijau pekat pincuk daun pisang
+                            light: '#FCFAF5'    // Krem kertas kraft bersih premium
                         }
                     }
                 }
@@ -30,83 +34,121 @@
         }
     </script>
     <style>
-        /* Background Utama: Pola Anyaman Bambu Tradisional (Besek) */
+        /* Desain Background Anyaman Besek Bambu & Batik Parang Klasik */
         body {
-            background-color: #D1C7BD;
-            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2v40h-2V0zm-40 40h40v2H0v-2zm40 2h2v38h-2V42zm-38 38h38v2H2v-2zM2 0h2v38H2V0zm0 40h38v2H2v-2zm40-38h38v2H42V2zm0 40h2v36h-2V42zm2-2h36v2H44v-2z' fill='%23A89989' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-color: #B19F85;
+            background-image: 
+                radial-gradient(rgba(35, 18, 10, 0.18) 1.5px, transparent 0),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 48c-2 0-3 1-4 2v4c1 1 2 2 4 2s3-1 4-2v-4c-1-1-2-2-4-2zm-24 0c-2 0-3 1-4 2v4c1 1 2 2 4 2s3-1 4-2v-4c-1-1-2-2-4-2zm-24 0c-2 0-3 1-4 2v4c1 1 2 2 4 2s3-1 4-2v-4c-1-1-2-2-4-2zm12-12c-2 0-3 1-4 2v4c1 1 2 2 4 2s3-1 4-2v-4c-1-1-2-2-4-2zm24 0c-2 0-3 1-4 2v4c1 1 2 2 4 2s3-1 4-2v-4c-1-1-2-2-4-2zM0 12c2 0 3-1 4-2V6c-1-1-2-2-4-2S1 5 0 6v4c1 1 2 2 4 2zm24 0c2 0 3-1 4-2V6c-1-1-2-2-4-2S21 5 20 6v4c1 1 2 2 4 2zm24 0c2 0 3-1 4-2V6c-1-1-2-2-4-2S45 5 44 6v4c1 1 2 2 4 2zM12 24c2 0 3-1 4-2v-4c-1-1-2-2-4-2S9 17 8 18v4c1 1 2 2 4 2zm24 0c2 0 3-1 4-2v-4c-1-1-2-2-4-2S33 17 32 18v4c1 1 2 2 4 2z' fill='%23806C54' fill-opacity='0.25' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
         
-        /* Efek Terapung Elegan */
-        .card-tradisional {
-            background: rgba(244, 239, 230, 0.96);
-            border: 1px solid rgba(212, 163, 115, 0.3);
-            box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08);
+        /* Bingkai Klasik Ganda dengan Sudut Ornamen */
+        .kartu-premium {
+            background: #FCFAF5;
+            border: 2px solid rgba(197, 147, 65, 0.4);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(35, 18, 10, 0.12);
+        }
+        
+        .kartu-premium::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 1px solid rgba(197, 147, 65, 0.2);
+            pointer-events: none;
         }
 
         .hover-angkringan {
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         .hover-angkringan:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(44, 26, 17, 0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px rgba(35, 18, 10, 0.22);
         }
 
-        /* Sembunyikan scrollbar bawaan */
+        /* Hilangkan Scrollbar Geser */
         .hide-scroll::-webkit-scrollbar { display: none; }
         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="antialiased text-stone-800 min-h-screen flex justify-center p-0 sm:p-4">
+<body class="antialiased text-stone-900 min-h-screen flex justify-center p-0 sm:p-6">
 
-    <div class="w-full max-w-md bg-pecel-kertas min-h-screen shadow-2xl relative overflow-hidden pb-12 border-x border-stone-300">
+    <!-- Mobile Wrapper (Simulasi Tampilan HP Premium) -->
+    <div class="w-full max-w-md bg-brand-light min-h-screen shadow-2xl relative overflow-hidden pb-20 border-x-8 border-brand-dark">
         
-        <div class="h-2 w-full bg-gradient-to-r from-pecel-emas via-pecel-daun to-pecel-tua"></div>
+        <!-- Ornamen Tenun Atas Tradisional -->
+        <div class="h-4 w-full bg-gradient-to-r from-brand-gold via-brand-green to-brand-dark"></div>
 
-        <header class="relative pt-8 pb-6 px-6 text-center z-10">
-            <div class="absolute top-4 right-4 bg-white/90 p-1 rounded border border-pecel-emas/30 shadow-sm h-9 w-11 flex items-center justify-center">
+        <!-- HEADER UTAMA -->
+        <header class="relative pt-10 pb-8 px-6 text-center z-10">
+            <!-- Ornamen Klasik Sisi Atas -->
+            <div class="flex justify-between items-center px-4 mb-2">
+                <span class="text-brand-gold text-xs">◆ ◆ ◆</span>
+                <span class="text-brand-gold text-xs">◆ ◆ ◆</span>
+            </div>
+
+            <!-- Logo Halal Otentik -->
+            <div class="absolute top-4 right-4 bg-white p-1 rounded-md border border-brand-gold/40 shadow-sm h-10 w-12 flex items-center justify-center">
                 <img src="logo%20halall.jpeg" alt="Halal Indonesia" class="max-h-full max-w-full object-contain">
             </div>
             
-            <h1 class="font-tradisi text-3xl font-bold text-pecel-tua tracking-wide leading-tight">
-                <span class="text-[10px] font-sans font-bold tracking-[0.3em] text-pecel-emas uppercase block mb-1">Cita Rasa Otentik</span>
+            <h1 class="font-serif text-4xl font-extrabold text-brand-dark tracking-normal leading-tight drop-shadow-[0_1.5px_1.5px_rgba(255,255,255,1)]">
+                <span class="text-xs font-sans font-extrabold tracking-[0.3em] text-brand-gold uppercase block mb-1">Cita Rasa Otentik Sejak Dulu</span>
                 RINDU KEDIRI
             </h1>
-            <p class="mt-2 text-[11px] font-sans font-semibold text-pecel-daun bg-emerald-100/60 inline-block px-4 py-1 rounded-full border border-emerald-200">
-                🍁 Sajian Legendaris Penghapus Rindu Kampung Halaman
+            
+            <p class="mt-4 text-[12px] font-sans font-extrabold text-white bg-brand-green inline-block px-6 py-2.5 rounded-full shadow-lg border border-brand-gold/30 tracking-wider">
+                🍂 BUMBU PECEL RESEP WARISAN KELUARGA
             </p>
+
+            <!-- Dekorasi Daun Tradisional -->
+            <div class="flex items-center justify-center gap-3 mt-5 text-brand-gold">
+                <div class="h-[1.5px] w-16 bg-gradient-to-r from-transparent to-brand-gold"></div>
+                <i class="fa-solid fa-leaf text-base animate-pulse"></i>
+                <div class="h-[1.5px] w-16 bg-gradient-to-l from-transparent to-brand-gold"></div>
+            </div>
         </header>
 
-        <div class="mx-5 mb-6 relative z-10 bg-gradient-to-br from-pecel-tua to-pecel-muda text-white p-3.5 rounded-xl shadow-lg border border-pecel-emas/40 flex items-center gap-3">
-            <div class="bg-pecel-emas text-pecel-tua w-10 h-10 rounded-lg flex items-center justify-center shrink-0 font-bold text-lg shadow-inner">
+        <!-- BANNER PROMO UTAMA (Double Date & Diskon) -->
+        <div class="mx-5 mb-8 relative z-10 bg-gradient-to-br from-brand-dark via-brand-sedang to-[#1E0F07] text-white p-4.5 rounded-2xl shadow-xl border-2 border-brand-gold flex items-center gap-4">
+            <div class="bg-gradient-to-br from-brand-gold to-amber-600 text-brand-dark font-serif text-2xl font-extrabold w-14 h-14 rounded-xl flex items-center justify-center shrink-0 shadow-md border border-white/20">
                 15%
             </div>
             <div class="text-left">
-                <h4 class="font-sans font-bold text-xs text-pecel-emas tracking-wide uppercase">🎉 PROMO PAKET RINDU HEMAT</h4>
-                <p class="text-[10px] text-stone-200 mt-0.5">Beli 3 varian ukuran sekaligus jauh lebih hemat & murah!</p>
+                <h4 class="font-sans font-extrabold text-xs text-brand-gold/90 uppercase tracking-widest leading-none">PROMO TERBATAS</h4>
+                <h3 class="font-serif text-lg font-bold text-white mt-1">Diskon 15% All Varian</h3>
+                <p class="text-[11px] text-stone-300 font-sans font-medium mt-1 leading-snug">Berlaku otomatis di Shopee setiap Tanggal Kembar (6.6, 7.7, dst). Jangan sampai kelewatan!</p>
             </div>
         </div>
 
-        <main class="relative z-10 px-5 space-y-6">
+        <!-- MAIN CONTENT AREA -->
+        <main class="relative z-10 px-5 space-y-8">
             
-            <section class="card-tradisional rounded-2xl p-4 border-b-4 border-pecel-emas relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-pecel-emas text-pecel-tua text-[9px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider font-tradisi">
-                    Memories
-                </div>
-                
-                <div class="flex items-center gap-2 mb-3">
-                    <div class="w-7 h-7 rounded-full bg-amber-100 flex items-center justify-center text-pecel-tua border border-pecel-emas/40">
-                        <i class="fa-solid fa-film text-xs"></i>
+            <!-- SEKSI 1: VIDEO MENGENANG KEDIRI (Menggunakan Link Aslimu) -->
+            <section class="kartu-premium rounded-2xl p-5 shadow-xl">
+                <!-- Ornamen Sudut Atas Kanan -->
+                <div class="absolute top-1 right-2 text-brand-gold opacity-60 text-[10px]">⚜</div>
+                <!-- Ornamen Sudut Kiri Bawah -->
+                <div class="absolute bottom-1 left-2 text-brand-gold opacity-60 text-[10px]">⚜</div>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center border border-brand-gold/50 shadow-inner">
+                        <i class="fa-solid fa-heart text-brand-gold text-base"></i>
                     </div>
                     <div>
-                        <h2 class="font-sans font-bold text-pecel-tua text-xs tracking-wide">MENGENANG KEDIRI</h2>
-                        <span class="text-[10px] text-stone-500 block">Sembari menikmati kelezatan bumbu pecel asli</span>
+                        <h2 class="font-serif text-xl text-brand-dark font-bold leading-tight">Mengenang Kediri</h2>
+                        <span class="text-[11px] text-stone-500 font-sans block font-semibold uppercase tracking-wider">Kehangatan kota legendaris</span>
                     </div>
                 </div>
 
-                <div class="relative w-full overflow-hidden rounded-xl aspect-video bg-black shadow-inner border border-stone-200">
+                <!-- Pemutar Video YouTube Suasana Kediri Pilihanmu -->
+                <div class="relative w-full overflow-hidden rounded-xl aspect-video bg-black shadow-2xl border-2 border-brand-gold/40">
                     <iframe class="absolute top-0 left-0 w-full h-full" 
                         src="https://www.youtube.com/embed/FNR0DYnYAQs" 
-                        title="Mengenang Kediri Video" 
+                        title="Mengenang Kediri" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen>
@@ -114,126 +156,248 @@
                 </div>
             </section>
 
-            <section class="bg-gradient-to-br from-amber-50 to-orange-100/40 p-4 rounded-2xl border-2 border-pecel-emas shadow-md relative overflow-hidden">
-                <div class="absolute -right-6 -top-6 w-16 h-16 bg-pecel-daun rotate-45 flex items-end justify-center pb-1.5">
-                    <span class="text-white text-[8px] font-bold -rotate-45 tracking-widest">Otentik</span>
-                </div>
-                
-                <div class="flex items-center gap-2 mb-3">
-                    <div class="w-7 h-7 rounded-full bg-pecel-daun text-white flex items-center justify-center shadow-sm">
-                        <i class="fa-solid fa-basket-shopping text-xs"></i>
+            <!-- SEKSI 2: PANDUAN CARA PENYAJIAN INTERAKTIF -->
+            <section class="kartu-premium rounded-2xl p-5 shadow-lg border-b-4 border-brand-green">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-brand-green border border-brand-green/30 shadow-inner">
+                        <i class="fa-solid fa-mortar-pestle text-base"></i>
                     </div>
                     <div>
-                        <h2 class="font-sans font-bold text-pecel-tua text-xs tracking-wide leading-none">BELI 3 LEBIH HEMAT</h2>
-                        <span class="text-[9px] text-stone-500 font-medium">Kombinasi lengkap pas untuk stok di rumah</span>
+                        <h2 class="font-serif text-xl text-brand-dark font-bold leading-tight">Panduan Menyeduh</h2>
+                        <span class="text-[11px] text-stone-500 font-sans block font-semibold uppercase tracking-wider">Ikuti langkah mudah di bawah ini</span>
                     </div>
                 </div>
 
-                <div class="flex items-center justify-between gap-4 bg-white/90 p-3 rounded-xl border border-pecel-emas/30 mb-3">
+                <!-- Pemutar Video Tutorial -->
+                <div class="relative w-full overflow-hidden rounded-xl aspect-video bg-black shadow-inner mb-4">
+                    <iframe id="tutorialVideo" class="absolute top-0 left-0 w-full h-full" 
+                        src="https://www.youtube.com/embed/NpvrGu9sQKw" 
+                        title="Tutorial Sambal Pecel" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p id="videoTitle" class="text-xs font-sans font-bold text-brand-dark text-center bg-stone-100 py-2.5 px-3 rounded-xl border border-stone-200">
+                    🍜 Cara 1: Penyajian Klasik (Diseduh Air Hangat)
+                </p>
+
+                <!-- Navigasi Ganti Video -->
+                <div class="grid grid-cols-3 gap-2 mt-4 font-sans">
+                    <button onclick="changeVideo('https://www.youtube.com/embed/NpvrGu9sQKw', '🍜 Cara 1: Penyajian Klasik (Diseduh Air Hangat)', this)" 
+                            class="video-btn active-btn bg-brand-green text-white text-[11px] font-bold py-3 px-1 rounded-xl shadow-md border-2 border-brand-green flex flex-col items-center gap-1.5 transition-all">
+                        <i class="fa-solid fa-mug-hot text-xs text-brand-gold"></i>
+                        <span>Seduh Air</span>
+                    </button>
+                    <button onclick="changeVideo('https://www.youtube.com/embed/_z4kYk4t3aM', '🥗 Cara 2: Kreasi Sayur Segar & Gorengan Renyah', this)" 
+                            class="video-btn bg-white text-brand-dark hover:bg-stone-50 text-[11px] font-bold py-3 px-1 rounded-xl shadow-sm border border-stone-200 flex flex-col items-center gap-1.5 transition-all">
+                        <i class="fa-solid fa-leaf text-xs text-brand-green"></i>
+                        <span>Kreasi Sayur</span>
+                    </button>
+                    <button onclick="changeVideo('https://www.youtube.com/embed/3_7YpP72tKk', '❄️ Cara 3: Tips Menyimpan Pecel Agar Tahan 6 Bulan', this)" 
+                            class="video-btn bg-white text-brand-dark hover:bg-stone-50 text-[11px] font-bold py-3 px-1 rounded-xl shadow-sm border border-stone-200 flex flex-col items-center gap-1.5 transition-all">
+                        <i class="fa-solid fa-snowflake text-xs text-blue-500"></i>
+                        <span>Tips Awet</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SEKSI 3: KEUNGGULAN PRODUK -->
+            <section class="text-center py-2">
+                <h3 class="font-serif text-2xl text-brand-dark font-extrabold mb-5 drop-shadow-[0_1px_0_rgba(255,255,255,1)]">Keunggulan Rindu Kediri</h3>
+                <div class="grid grid-cols-3 gap-3 font-sans">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-brand-dark shadow-md mb-2 border border-brand-gold/40">
+                            <i class="fa-solid fa-fire-burner text-sm"></i>
+                        </div>
+                        <h5 class="text-[11px] font-extrabold text-brand-dark">Disangrai Alami</h5>
+                        <p class="text-[9px] text-stone-500 font-semibold mt-1">Kacang disangrai rata tanpa minyak</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-brand-green shadow-md mb-2 border border-emerald-200">
+                            <i class="fa-solid fa-shield-virus text-sm"></i>
+                        </div>
+                        <h5 class="text-[11px] font-extrabold text-brand-dark">Tanpa Pengawet</h5>
+                        <p class="text-[9px] text-stone-500 font-semibold mt-1">Bahan segar &amp; higienis pilihan</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-800 shadow-md mb-2 border border-orange-200">
+                            <i class="fa-solid fa-pepper-hot text-sm"></i>
+                        </div>
+                        <h5 class="text-[11px] font-extrabold text-brand-dark">Rempah Otentik</h5>
+                        <p class="text-[9px] text-stone-500 font-semibold mt-1">Racikan kencur &amp; daun jeruk purut</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEKSI 4: TIKET VOUCHER BELI 3 LEBIH HEMAT (Sesuai Brosur Brosormu) -->
+            <section class="hover-angkringan bg-[#FFFDF9] rounded-2xl border-2 border-dashed border-brand-gold p-6 shadow-xl relative overflow-hidden">
+                <!-- Gerigi Tiket Samping Kiri -->
+                <div class="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-brand-light border-r-2 border-brand-gold"></div>
+                <!-- Gerigi Tiket Samping Kanan -->
+                <div class="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-brand-light border-l-2 border-brand-gold"></div>
+
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-red-600 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider font-sans">
+                        Paket Rindu Hemat
+                    </span>
+                </div>
+
+                <h3 class="font-serif text-2xl font-bold text-brand-dark">Beli 3 Lebih Hemat!</h3>
+                <p class="text-[12px] font-sans font-medium text-stone-600 mt-1 leading-snug">Satu paket lengkap berisi tiga varian kemasan sekaligus (100gr, 250gr, dan 500gr).</p>
+
+                <!-- Divider Garis Sobek Tiket -->
+                <div class="border-t-2 border-dashed border-stone-200 my-4"></div>
+
+                <div class="flex items-center justify-between font-sans">
                     <div class="text-left">
-                        <span class="bg-red-600 text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase">Diskon 15%</span>
-                        <h4 class="font-sans font-bold text-pecel-tua text-xs mt-1">Paket 3 Varian Rasa</h4>
-                        <p class="text-[9px] text-stone-500 mt-0.5">Dapat 3 Pack (100gr + 250gr + 500gr)</p>
+                        <span class="text-xs text-stone-400 line-through font-bold block">Rp 126.000</span>
+                        <span class="text-2xl font-black text-brand-green">Rp 105.000</span>
                     </div>
-                    <div class="text-right">
-                        <p class="text-[10px] text-stone-400 line-through font-semibold leading-none">Rp 126.000</p>
-                        <p class="text-base font-extrabold text-pecel-daun mt-1 leading-none">Rp 105.000</p>
-                        <span class="text-[8px] font-bold text-white bg-emerald-600 px-1.5 py-0.5 rounded inline-block mt-1">Hemat Rp 21.000</span>
+                    <div class="bg-brand-gold/10 text-brand-dark text-center px-3 py-1.5 rounded-xl border border-brand-gold/30">
+                        <span class="text-[9px] font-bold uppercase block tracking-wider text-brand-gold">Diskon Spesial</span>
+                        <span class="text-xs font-black text-red-600">Hemat 21 Ribu</span>
                     </div>
                 </div>
 
+                <!-- Tombol Belanja Shopee Asli Pilihanmu -->
                 <a href="https://shopee.co.id/product/1024081815/48561451711?d_id=bdee8&uls_trackid=55php79i005c&utm_content=4UTWuQWGeNFDn7bW6YnaW4XFRiab" 
                    target="_blank" 
-                   class="hover-angkringan block text-center bg-pecel-daun hover:bg-pecel-tua text-white text-xs font-bold py-2.5 px-4 rounded-xl transition-all shadow-md">
-                    <i class="fa-solid fa-bag-shopping mr-2 text-pecel-emas"></i>Beli Paket Hemat di Shopee
+                   class="block text-center bg-brand-green hover:bg-brand-dark text-white text-sm font-extrabold py-3.5 px-4 rounded-xl transition-all shadow-md mt-5 uppercase tracking-wider font-sans border-b-4 border-emerald-950">
+                    <i class="fa-solid fa-shopping-bag mr-2 text-brand-gold"></i>Pesan Paket Hemat via Shopee
                 </a>
             </section>
 
-            <section class="space-y-2.5">
+            <!-- SEKSI 5: SLIDER UKURAN PRODUK LAINNYA -->
+            <section class="space-y-3">
                 <div class="flex items-center gap-2 px-1">
-                    <div class="w-6 h-6 rounded-full bg-pecel-tua/10 flex items-center justify-center text-pecel-tua">
-                        <i class="fa-solid fa-boxes-stacked text-xs"></i>
+                    <div class="w-7 h-7 rounded-full bg-brand-dark/10 flex items-center justify-center text-brand-dark">
+                        <i class="fa-solid fa-cubes text-xs"></i>
                     </div>
-                    <h2 class="font-sans font-bold text-pecel-tua text-xs tracking-wide">PILIHAN UKURAN KEMASAN</h2>
+                    <h2 class="font-serif text-xl text-brand-dark font-bold">Pilih Varian Ukuran</h2>
                 </div>
                 
-                <div class="flex overflow-x-auto gap-3.5 pb-2 snap-x hide-scroll">
+                <!-- Slide Horizontal -->
+                <div class="flex overflow-x-auto gap-4 pb-3 snap-x hide-scroll">
                     
-                    <div class="snap-start shrink-0 w-32 bg-white rounded-xl shadow-sm overflow-hidden border border-stone-200 flex flex-col justify-between">
-                        <div class="h-24 bg-stone-50 relative flex items-center justify-center p-2">
-                            <img src="100gr.png" alt="100gr" class="max-h-full max-w-full object-contain hover:scale-105 transition-all">
-                            <div class="absolute bottom-1 right-1 bg-stone-900/80 text-white text-[8px] font-bold px-1.5 py-0.5 rounded">Rp 18.000</div>
+                    <!-- Varian 100gr -->
+                    <div class="snap-start shrink-0 w-36 bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between hover-angkringan">
+                        <div class="h-28 bg-brand-light relative flex items-center justify-center p-3 border-b border-stone-100">
+                            <img src="100gr.png" alt="100gr" class="max-h-full max-w-full object-contain">
+                            <span class="absolute top-2 left-2 bg-brand-gold text-brand-dark text-[8px] font-extrabold px-2 py-0.5 rounded-full">100g</span>
                         </div>
-                        <div class="p-2 text-center bg-stone-50/50 border-t border-stone-100">
-                            <h4 class="font-bold text-[10px] text-pecel-tua truncate">Varian 100gr Pack</h4>
-                            <a href="https://shopee.co.id/product/1024081815/48561451711?d_id=bdee8&uls_trackid=55php79i005c&utm_content=4UTWuQWGeNFDn7bW6YnaW4XFRiab" target="_blank" class="block w-full bg-pecel-tua hover:bg-pecel-emas text-white text-[9px] py-1 rounded mt-1.5 font-semibold transition-all">Pesan</a>
-                        </div>
-                    </div>
-
-                    <div class="snap-start shrink-0 w-32 bg-white rounded-xl shadow-sm overflow-hidden border border-stone-200 flex flex-col justify-between">
-                        <div class="h-24 bg-stone-50 relative flex items-center justify-center p-2">
-                            <img src="250gr.png" alt="250gr" class="max-h-full max-w-full object-contain hover:scale-105 transition-all">
-                            <div class="absolute bottom-1 right-1 bg-stone-900/80 text-white text-[8px] font-bold px-1.5 py-0.5 rounded">Rp 38.000</div>
-                        </div>
-                        <div class="p-2 text-center bg-stone-50/50 border-t border-stone-100">
-                            <h4 class="font-bold text-[10px] text-pecel-tua truncate">Varian 250gr Pack</h4>
-                            <a href="https://shopee.co.id/product/1024081815/48561451711?d_id=bdee8&uls_trackid=55php79i005c&utm_content=4UTWuQWGeNFDn7bW6YnaW4XFRiab" target="_blank" class="block w-full bg-pecel-tua hover:bg-pecel-emas text-white text-[9px] py-1 rounded mt-1.5 font-semibold transition-all">Pesan</a>
+                        <div class="p-3 text-center font-sans">
+                            <h4 class="font-black text-sm text-brand-dark">Rp 18.000</h4>
+                            <p class="text-[10px] text-stone-500 font-bold mt-1">Praktis untuk Traveling</p>
+                            <a href="https://shopee.co.id/product/1024081815/48561451711?d_id=bdee8&uls_trackid=55php79i005c&utm_content=4UTWuQWGeNFDn7bW6YnaW4XFRiab" target="_blank" class="block w-full bg-brand-dark hover:bg-brand-gold text-white text-[10px] font-bold py-2.5 rounded-lg mt-3 transition-all uppercase tracking-wider">Beli Ukuran</a>
                         </div>
                     </div>
 
-                    <div class="snap-start shrink-0 w-32 bg-white rounded-xl shadow-sm overflow-hidden border border-stone-200 flex flex-col justify-between">
-                        <div class="h-24 bg-stone-50 relative flex items-center justify-center p-2">
-                            <img src="500gr.png" alt="500gr" class="max-h-full max-w-full object-contain hover:scale-105 transition-all">
-                            <div class="absolute bottom-1 right-1 bg-stone-900/80 text-white text-[8px] font-bold px-1.5 py-0.5 rounded">Rp 45.000</div>
+                    <!-- Varian 250gr -->
+                    <div class="snap-start shrink-0 w-36 bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between hover-angkringan">
+                        <div class="h-28 bg-brand-light relative flex items-center justify-center p-3 border-b border-stone-100">
+                            <img src="250gr.png" alt="250gr" class="max-h-full max-w-full object-contain">
+                            <span class="absolute top-2 left-2 bg-brand-green text-white text-[8px] font-extrabold px-2 py-0.5 rounded-full">250g</span>
                         </div>
-                        <div class="p-2 text-center bg-stone-50/50 border-t border-stone-100">
-                            <h4 class="font-bold text-[10px] text-pecel-tua truncate">Varian 500gr Pack</h4>
-                            <a href="https://shopee.co.id/product/1024081815/48561451711?d_id=bdee8&uls_trackid=55php79i005c&utm_content=4UTWuQWGeNFDn7bW6YnaW4XFRiab" target="_blank" class="block w-full bg-pecel-tua hover:bg-pecel-emas text-white text-[9px] py-1 rounded mt-1.5 font-semibold transition-all">Pesan</a>
+                        <div class="p-3 text-center font-sans">
+                            <h4 class="font-black text-sm text-brand-dark">Rp 38.000</h4>
+                            <p class="text-[10px] text-stone-500 font-bold mt-1">Pas Stok Rumah Tangga</p>
+                            <a href="https://shopee.co.id/product/1024081815/48561451711?d_id=bdee8&uls_trackid=55php79i005c&utm_content=4UTWuQWGeNFDn7bW6YnaW4XFRiab" target="_blank" class="block w-full bg-brand-dark hover:bg-brand-gold text-white text-[10px] font-bold py-2.5 rounded-lg mt-3 transition-all uppercase tracking-wider">Beli Ukuran</a>
+                        </div>
+                    </div>
+
+                    <!-- Varian 500gr -->
+                    <div class="snap-start shrink-0 w-36 bg-white rounded-2xl shadow-md overflow-hidden border border-stone-200 flex flex-col justify-between hover-angkringan">
+                        <div class="h-28 bg-brand-light relative flex items-center justify-center p-3 border-b border-stone-100">
+                            <img src="500gr.png" alt="500gr" class="max-h-full max-w-full object-contain">
+                            <span class="absolute top-2 left-2 bg-[#8B0000] text-white text-[8px] font-extrabold px-2 py-0.5 rounded-full">500g</span>
+                        </div>
+                        <div class="p-3 text-center font-sans">
+                            <h4 class="font-black text-sm text-brand-dark">Rp 45.000</h4>
+                            <p class="text-[10px] text-stone-500 font-bold mt-1">Ukuran Jumbo / Keluarga</p>
+                            <a href="https://shopee.co.id/product/1024081815/48561451711?d_id=bdee8&uls_trackid=55php79i005c&utm_content=4UTWuQWGeNFDn7bW6YnaW4XFRiab" target="_blank" class="block w-full bg-brand-dark hover:bg-brand-gold text-white text-[10px] font-bold py-2.5 rounded-lg mt-3 transition-all uppercase tracking-wider">Beli Ukuran</a>
                         </div>
                     </div>
 
                 </div>
             </section>
 
-            <section class="grid grid-cols-2 gap-3 pt-2">
-                <a href="https://wa.me/62895328409020?text=Halo%20Sambal%20Pecel%20Rindu%20Kediri%2C%20saya%20tertarik%20untuk%20order" 
+            <!-- SEKSI 6: HUBUNGI KAMI & ALAMAT AKURAT (Menggunakan Link Maps Aslimu) -->
+            <section class="grid grid-cols-2 gap-3 pt-2 font-sans">
+                <!-- WhatsApp Chat Asli -->
+                <a href="https://wa.me/62895328409020?text=Halo%20Sambal%20Pecel%20Rindu%20Kediri%2C%20saya%20tertarik%20untuk%20membeli%20bumbu%20pecel%20resep%20asli%20Kediri." 
                    target="_blank" 
-                   class="hover-angkringan flex flex-col items-center justify-center bg-white p-3.5 rounded-xl shadow-sm border-b-4 border-emerald-500 text-center gap-1.5 border border-stone-200">
-                    <div class="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 shadow-inner">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                   class="hover-angkringan flex flex-col items-center justify-center bg-white p-4.5 rounded-2xl shadow-md border-b-4 border-[#25D366] text-center gap-2 border border-stone-200">
+                    <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-[#25D366] shadow-inner">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-pecel-tua text-xs">Pesan via WA</h3>
-                        <p class="text-[8px] text-stone-500">Layanan Kilat & Ramah</p>
+                        <h3 class="font-extrabold text-brand-dark text-xs">Pesan via WA</h3>
+                        <p class="text-[9px] text-stone-500 font-semibold mt-0.5">Tanya Stok &amp; Ongkir</p>
                     </div>
                 </a>
 
+                <!-- Google Maps Lokasi Akurat Pilihanmu -->
                 <a href="https://maps.app.goo.gl/sF26zpiiu8hrUTuu9" 
                    target="_blank" 
-                   class="hover-angkringan flex flex-col items-center justify-center bg-white p-3.5 rounded-xl shadow-sm border-b-4 border-amber-600 text-center gap-1.5 border border-stone-200">
-                    <div class="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center text-amber-700 shadow-inner">
-                        <i class="fa-solid fa-map-location-dot text-xl"></i>
+                   class="hover-angkringan flex flex-col items-center justify-center bg-white p-4.5 rounded-2xl shadow-md border-b-4 border-[#4285F4] text-center gap-2 border border-stone-200">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-[#4285F4] shadow-inner">
+                        <i class="fa-solid fa-map-location-dot text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-pecel-tua text-xs">Lokasi Rumah</h3>
-                        <p class="text-[8px] text-stone-500">Kunjungi Kami di Kediri</p>
+                        <h3 class="font-extrabold text-brand-dark text-xs">Alamat Rumah</h3>
+                        <p class="text-[9px] text-stone-500 font-semibold mt-0.5">Lokasi Google Maps</p>
                     </div>
                 </a>
             </section>
 
         </main>
 
-        <footer class="mt-10 text-center px-4">
-            <div class="w-12 h-[1px] bg-pecel-emas/40 mx-auto mb-3"></div>
-            <p class="text-[9px] font-sans font-semibold text-stone-500 uppercase tracking-widest">
+        <!-- FOOTER TRADISIONAL BERASAS HARMONI -->
+        <footer class="mt-14 text-center px-4 relative z-10">
+            <div class="flex justify-center gap-4 mb-4">
+                <a href="https://instagram.com/pecelrindukediri" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-dark hover:bg-brand-gold hover:text-white transition-all shadow-md">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                </a>
+                <a href="https://wa.me/62895328409020" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-dark hover:bg-brand-gold hover:text-white transition-all shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                </a>
+            </div>
+            <div class="w-20 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-3"></div>
+            <p class="text-[10px] font-sans font-bold text-stone-500 uppercase tracking-widest">
                 Sambal Pecel Rindu Kediri
             </p>
-            <p class="text-[8px] text-stone-400 mt-1">
-                © 2026. Dibuat dengan bangga kelestarian rasa asli kuliner Kediri.
+            <p class="text-[9px] text-stone-400 mt-1 font-semibold leading-relaxed">
+                © 2026. Resep Kuliner Tradisional Kediri. Hak Cipta Dilindungi.<br>Dibuat dengan rasa rindu yang mendalam.
             </p>
         </footer>
 
     </div>
+
+    <!-- SCRIPT UTAMA UNTUK MENGATUR VIDEO TUTORIAL (Wajib) -->
+    <script>
+        function changeVideo(videoUrl, titleText, buttonElement) {
+            const iframe = document.getElementById('tutorialVideo');
+            iframe.style.opacity = '0';
+            
+            setTimeout(() => {
+                iframe.src = videoUrl;
+                iframe.style.opacity = '1';
+            }, 250);
+
+            document.getElementById('videoTitle').innerText = titleText;
+
+            const allButtons = document.querySelectorAll('.video-btn');
+            allButtons.forEach(btn => {
+                btn.classList.remove('bg-brand-green', 'text-white');
+                btn.classList.add('bg-white', 'text-brand-dark');
+            });
+
+            buttonElement.classList.remove('bg-white', 'text-brand-dark');
+            buttonElement.classList.add('bg-brand-green', 'text-white');
+        }
+    </script>
 
 </body>
 </html>
