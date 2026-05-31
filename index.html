@@ -141,25 +141,53 @@
                     🍜 Cara 1: Penyajian Klasik (Diseduh Air Hangat)
                 </p>
 
-                <!-- Tombol Navigasi Pilihan Video -->
-                <div class="grid grid-cols-3 gap-2 mt-3">
-                    <button onclick="changeVideo('https://youtube.com/shorts/NpvrGu9sQKw?si=aekiggP8g4ahwyVu', '🍜 Cara 1: Penyajian Klasik (Diseduh Air Hangat)', this)" 
-                            class="video-btn active-btn bg-brand-green text-white text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-brand-green flex flex-col items-center gap-1 transition-all">
-                        <i class="fa-solid fa-mug-hot text-xs"></i>
-                        <span>Seduh Air</span>
-                    </button>
-                    <button onclick="changeVideo('https://youtube.com/shorts/_z4kYk4t3aM?si=wRy8budB0TFols9i', '🥗 Cara 2: Kreasi Sayur Segar & Gorengan renyah', this)" 
-                            class="video-btn bg-white text-brand-dark hover:bg-gray-50 text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-gray-200 flex flex-col items-center gap-1 transition-all">
-                        <i class="fa-solid fa-leaf text-xs text-brand-green"></i>
-                        <span>Kreasi Sayur</span>
-                    </button>
-                    <button onclick="changeVideo('https://www.youtube.com/embed/3_7YpP72tKk', '❄️ Cara 3: Tips Menyimpan Pecel Agar Tahan 6 Bulan', this)" 
-                            class="video-btn bg-white text-brand-dark hover:bg-gray-50 text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-gray-200 flex flex-col items-center gap-1 transition-all">
-                        <i class="fa-solid fa-snowflake text-xs text-blue-500"></i>
-                        <span>Tips Awet</span>
-                    </button>
-                </div>
-            </section>
+               <section class="glass-card rounded-2xl p-4 shadow-lg border-b-4 border-brand-green relative overflow-hidden">
+    <div class="absolute top-0 right-0 bg-brand-green text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+        Tutorial
+    </div>
+    
+    <div class="flex items-center gap-2 mb-3">
+        <div class="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center text-brand-green">
+            <i class="fa-solid fa-utensils text-sm"></i>
+        </div>
+        <div>
+            <h2 class="font-bold text-brand-dark text-sm tracking-wide leading-none">CARA PENYAJIAN</h2>
+            <span class="text-[10px] text-gray-500">Pilih menu di bawah untuk menonton caranya</span>
+        </div>
+    </div>
+
+    <div class="relative w-full overflow-hidden rounded-xl aspect-video bg-black shadow-inner video-container">
+        <iframe id="tutorialVideo" class="absolute top-0 left-0 w-full h-full" 
+            src="https://www.youtube.com/embed/NpvrGu9sQKw" 
+            title="Cara Penyajian Sambal Pecel" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p id="videoTitle" class="text-xs font-bold text-brand-dark text-center mt-3 bg-brand-light/60 py-1.5 px-3 rounded-lg border border-brand-gold/10">
+        🍜 Cara 1: Penyajian Klasik (Diseduh Air Hangat)
+    </p>
+
+    <div class="grid grid-cols-3 gap-2 mt-3">
+        <button onclick="changeVideo('https://www.youtube.com/embed/NpvrGu9sQKw', '🍜 Cara 1: Penyajian Klasik (Diseduh Air Hangat)', this)" 
+                class="video-btn active-btn bg-brand-green text-white text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-brand-green flex flex-col items-center gap-1 transition-all">
+            <i class="fa-solid fa-mug-hot text-xs"></i>
+            <span>Seduh Air</span>
+        </button>
+        <button onclick="changeVideo('https://www.youtube.com/embed/_z4kYk4t3aM', '🥗 Cara 2: Kreasi Sayur Segar & Gorengan renyah', this)" 
+                class="video-btn bg-white text-brand-dark hover:bg-gray-50 text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-gray-200 flex flex-col items-center gap-1 transition-all">
+            <i class="fa-solid fa-leaf text-xs text-brand-green"></i>
+            <span>Kreasi Sayur</span>
+        </button>
+        <button onclick="changeVideo('https://www.youtube.com/embed/3_7YpP72tKk', '❄️ Cara 3: Tips Menyimpan Pecel Agar Tahan 6 Bulan', this)" 
+                class="video-btn bg-white text-brand-dark hover:bg-gray-50 text-[10px] font-bold py-2 px-1 rounded-lg shadow-sm border border-gray-200 flex flex-col items-center gap-1 transition-all">
+            <i class="fa-solid fa-snowflake text-xs text-blue-500"></i>
+            <span>Tips Awet</span>
+        </button>
+    </div>
+</section>
 
             <!-- PROMO PAKET RINDU HEMAT (BELI 3 LEBIH HEMAT - BARU) -->
             <section class="bg-gradient-to-br from-amber-50 to-orange-100/50 p-4 rounded-2xl border-2 border-brand-gold shadow-md relative overflow-hidden">
